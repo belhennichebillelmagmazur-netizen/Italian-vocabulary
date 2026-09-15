@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Italian Vocabulary</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+
+            background-image:
+                linear-gradient(
+                    rgba(0,0,0,.45),
+                    rgba(0,0,0,.55)
+                ),
+                url("https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=2400&q=90");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            color: #222;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 60px auto;
+        }
+
+        .main-card {
+            background: rgba(255,255,255,.93);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+
+            border-radius: 25px;
+
+            padding: 45px 35px;
+
+            box-shadow:
+                0 20px 50px rgba(0,0,0,.35);
+
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            color: #1b1b1b;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        /* BUTTONS */
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        button {
+            border: none;
+
+            padding: 15px 25px;
+
+            border-radius: 50px;
+
+            font-size: 17px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            background: #222;
+            color: white;
+
+            transition: all .3s ease;
+
+            box-shadow:
+                0 8px 20px rgba(0,0,0,.2);
+        }
+
+        button:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 12px 25px rgba(0,0,0,.3);
+        }
+
+        button:active {
+            transform: scale(.97);
+        }
+
+        /* VOCABULARY SECTIONS */
+
+        .vocabulary-section {
+            display: none;
+
+            margin-top: 30px;
+
+            background: rgba(255,255,255,.85);
+
+            border-radius: 20px;
+
+            padding: 30px;
+
+            text-align: left;
+
+            animation: fadeIn .5s ease;
+        }
+
+        .vocabulary-section.show {
+            display: block;
+        }
+
+        .vocabulary-section h2 {
+            text-align: center;
+
+            margin-bottom: 25px;
+
+            font-size: 30px;
+
+            color: #222;
+        }
+
+        .word-list {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 12px;
+        }
+
+        .word {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 15px 18px;
+
+            background: white;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 4px 12px rgba(0,0,0,.08);
+
+            transition: all .25s ease;
+        }
+
+        .word:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 8px 18px rgba(0,0,0,.15);
+        }
+
+        .word span:first-child {
+            font-weight: bold;
+
+            color: #222;
+
+            font-size: 16px;
+        }
+
+        .word span:last-child {
+            color: #555;
+
+            direction: rtl;
+
+            text-align: right;
+
+            font-size: 15px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 30px;
+
+            color: white;
+
+            text-align: center;
+
+            font-size: 14px;
+
+            opacity: .9;
+        }
+
+        /* ANIMATION */
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        /* TABLET */
+
+        @media (max-width: 750px) {
+
+            .word-list {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+
+            .main-card {
+                padding: 35px 20px;
+            }
+
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 500px) {
+
+            .container {
+                width: 94%;
+                margin: 25px auto;
+            }
+
+            .main-card {
+                padding: 30px 15px;
+            }
+
+            h1 {
+                font-size: 29px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            button {
+                width: 100%;
+                font-size: 16px;
+            }
+
+            .vocabulary-section {
+                padding: 18px;
+            }
+
+            .vocabulary-section h2 {
+                font-size: 25px;
+            }
+
+            .word {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .word span:last-child {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+    <div class="main-card">
+
+        <h1>🇮🇹 Italian Vocabulary</h1>
+
+        <p class="subtitle">
+            Impara nuove parole italiane con la traduzione araba
+        </p>
+
+
+        <!-- ========================= -->
+        <!-- CATEGORY BUTTONS -->
+        <!-- ========================= -->
+
+        <div class="buttons">
+
+            <!-- 1. FAMILY -->
+
+            <button
+                id="familyBtn"
+                onclick="toggleSection(
+                    'famiglia',
+                    'familyBtn',
+                    '👨‍👩‍👧‍👦 La Famiglia',
+                    '✖ Nascondi La Famiglia'
+                )">
+
+                👨‍👩‍👧‍👦 La Famiglia
+
+            </button>
+
+
+            <!-- 2. COLORS -->
+
+            <button
+                id="colorsBtn"
+                onclick="toggleSection(
+                    'colori',
+                    'colorsBtn',
+                    '🎨 I Colori',
+                    '✖ Nascondi I Colori'
+                )">
+
+                🎨 I Colori
+
+            </button>
+
+
+            <!-- 3. ADJECTIVES -->
+
+            <button
+                id="aggettiviBtn"
+                onclick="toggleSection(
+                    'aggettivi',
+                    'aggettiviBtn',
+                    '📝 Gli Aggettivi',
+                    '✖ Nascondi Gli Aggettivi'
+                )">
+
+                📝 Gli Aggettivi
+
+            </button>
+
+
+            <!-- 4. HUMAN BODY -->
+
+            <button
+                id="corpoBtn"
+                onclick="toggleSection(
+                    'corpo',
+                    'corpoBtn',
+                    '🧍 Il Corpo Umano',
+                    '✖ Nascondi Il Corpo Umano'
+                )">
+
+                🧍 Il Corpo Umano
+
+            </button>
+
+
+            <!-- 5. TRANSPORT -->
+
+            <button
+                id="trasportiBtn"
+                onclick="toggleSection(
+                    'trasporti',
+                    'trasportiBtn',
+                    '🚗 I Trasporti',
+                    '✖ Nascondi I Trasporti'
+                )">
+
+                🚗 I Trasporti
+
+            </button>
+
+
+            <!-- 6. NATURE -->
+
+            <button
+                id="naturaBtn"
+                onclick="toggleSection(
+                    'natura',
+                    'naturaBtn',
+                    '🌿 La Natura',
+                    '✖ Nascondi La Natura'
+                )">
+
+                🌿 La Natura
+
+            </button>
+
+
+            <!-- 7. ANIMALS -->
+
+            <button
+                id="animaliBtn"
+                onclick="toggleSection(
+                    'animali',
+                    'animaliBtn',
+                    '🐾 Gli Animali',
+                    '✖ Nascondi Gli Animali'
+                )">
+
+                🐾 Gli Animali
+
+            </button>
+
+
+            <!-- 8. HOUSE -->
+
+            <button
+                id="casaBtn"
+                onclick="toggleSection(
+                    'casa',
+                    'casaBtn',
+                    '🏠 La Casa',
+                    '✖ Nascondi La Casa'
+                )">
+
+                🏠 La Casa
+
+            </button>
+
+
+            <!-- 9. QUALITIES -->
+
+            <button
+                id="qualitaBtn"
+                onclick="toggleSection(
+                    'qualita',
+                    'qualitaBtn',
+                    '💎 Qualità, sentimenti e caratteristiche personali',
+                    '✖ Nascondi Qualità, sentimenti e caratteristiche personali'
+                )">
+
+                💎 Qualità, sentimenti e caratteristiche personali
+
+            </button>
+
+
+            <!-- 10. STREET -->
+
+            <button
+                id="stradaBtn"
+                onclick="toggleSection(
+                    'strada',
+                    'stradaBtn',
+                    '🚶‍♂️ La Strada',
+                    '✖ Nascondi La Strada'
+                )">
+
+                🚶‍♂️ La Strada
+
+            </button>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- 1. LA FAMIGLIA -->
+        <!-- ================================================= -->
+
+        <div class="vocabulary-section" id="famiglia">
+
+            <h2>👨‍👩‍👧‍👦 La Famiglia</h2>
+
+            <div class="word-list">
+
+                <div class="word"><span>il padre</span><span>الأب</span></div>
+                <div class="word"><span>la madre</span><span>الأم</span></div>
+                <div class="word"><span>il figlio</span><span>الابن</span></div>
+                <div class="word"><span>la figlia</span><span>الابنة</span></div>
+                <div class="word"><span>il fratello</span><span>الأخ</span></div>
+                <div class="word"><span>la sorella</span><span>الأخت</span></div>
+                <div class="word"><span>il nonno</span><span>الجد</span></div>
+                <div class="word"><span>la nonna</span><span>الجدة</span></div>
+                <div class="word"><span>lo zio</span><span>العم / الخال</span></div>
+                <div class="word"><span>la zia</span><span>العمة / الخالة</span></div>
+                <div class="word"><span>il cugino</span><span>ابن العم / ابن الخال</span></div>
+                <div class="word"><span>la cugina</span><span>بنت العم / بنت الخال</span></div>
+                <div class="word"><span>il nipote</span><span>الحفيد / ابن الأخ أو الأخت</span></div>
+                <div class="word"><span>la nipote</span><span>الحفيدة / بنت الأخ أو الأخت</span></div>
+                <div class="word"><span>il marito</span><span>الزوج</span></div>
+                <div class="word"><span>la moglie</span><span>الزوجة</span></div>
+                <div class="word"><span>il bambino</span><span>الطفل</span></div>
+                <div class="word"><span>la bambina</span><span>الطفلة</span></div>
+                <div class="word"><span>il ragazzo</span><span>الشاب / الابن</span></div>
+                <div class="word"><span>la ragazza</span><span>الشابة / الابنة</span></div>
+                <div class="word"><span>il genitore</span><span>الوالد</span></div>
+                <div class="word"><span>la genitrice</span><span>الوالدة</span></div>
+                <div class="word"><span>il suocero</span><span>والد الزوج / الزوجة</span></div>
+                <div class="word"><span>la suocera</span><span>والدة الزوج / الزوجة</span></div>
+                <div class="word"><span>il cognato</span><span>صهر / أخ الزوج أو الزوجة</span></div>
+                <div class="word"><span>la cognata</span><span>أخت الزوج أو الزوجة</span></div>
+                <div class="word"><span>il genero</span><span>زوج الابنة</span></div>
+                <div class="word"><span>la nuora</span><span>زوجة الابن</span></div>
+                <div class="word"><span>il gemello</span><span>التوأم الذكر</span></div>
+                <div class="word"><span>la gemella</span><span>التوأم الأنثى</span></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- 2. I COLORI -->
+        <!-- ================================================= -->
+
+        <div class="vocabulary-section" id="colori">
+
+            <h2>🎨 I Colori</h2>
+
+            <div class="word-list">
+
+                <div class="word"><span>il rosso</span><span>الأحمر</span></div>
+                <div class="word"><span>il blu</span><span>الأزرق</span></div>
+                <div class="word"><span>il verde</span><span>الأخضر</span></div>
+                <div class="word"><span>il giallo</span><span>الأصفر</span></div>
+                <div class="word"><span>il nero</span><span>الأسود</span></div>
+                <div class="word"><span>il bianco</span><span>الأبيض</span></div>
+                <div class="word"><span>il grigio</span><span>الرمادي</span></div>
+                <div class="word"><span>il marrone</span><span>البني</span></div>
+                <div class="word"><span>il rosa</span><span>الوردي</span></div>
+                <div class="word"><span>il viola</span><span>البنفسجي</span></div>
+                <div class="word"><span>l'arancione</span><span>البرتقالي</span></div>
+                <div class="word"><span>l'azzurro</span><span>الأزرق السماوي</span></div>
+                <div class="word"><span>il celeste</span><span>الأزرق الفاتح</span></div>
+                <div class="word"><span>il beige</span><span>البيج</span></div>
+                <div class="word"><span>il dorato</span><span>الذهبي</span></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- 3. GLI AGGETTIVI -->
+        <!-- ================================================= -->
+
+        <div class="vocabulary-section" id="aggettivi">
+
+            <h2>📝 Gli Aggettivi</h2>
+
+            <div class="word-list">
+
+                <div class="word"><span>grande ↔ piccolo</span><span>كبير ↔ صغير</span></div>
+                <div class="word"><span>alto ↔ basso</span><span>طويل ↔ قصير</span></div>
+                <div class="word"><span>bello ↔ brutto</span><span>جميل ↔ قبيح</span></div>
+                <div class="word"><span>buono ↔ cattivo</span><span>جيد ↔ سيئ</span></div>
+                <div class="word"><span>facile ↔ difficile</span><span>سهل ↔ صعب</span></div>
+                <div class="word"><span>veloce ↔ lento</span><span>سريع ↔ بطيء</span></div>
+                <div class="word"><span>forte ↔ debole</span><span>قوي ↔ ضعيف</span></div>
+                <div class="word"><span>felice ↔ triste</span><span>سعيد ↔ حزين</span></div>
+                <div class="word"><span>vicino ↔ lontano</span><span>قريب ↔ بعيد</span></div>
+                <div class="word"><span>pulito ↔ sporco</span><span>نظيف ↔ متسخ</span></div>
+                <div class="word"><span>nuovo ↔ vecchio</span><span>جديد ↔ قديم</span></div>
+                <div class="word"><span>giovane ↔ anziano</span><span>شاب ↔ مسن</span></div>
+                <div class="word"><span>caldo ↔ freddo</span><span>ساخن ↔ بارد</span></div>
+                <div class="word"><span>pieno ↔ vuoto</span><span>ممتلئ ↔ فارغ</span></div>
+                <div class="word"><span>aperto ↔ chiuso</span><span>مفتوح ↔ مغلق</span></div>
+                <div class="word"><span>chiaro ↔ scuro</span><span>فاتح / واضح ↔ داكن / مظلم</span></div>
+                <div class="word"><span>ricco ↔ povero</span><span>غني ↔ فقير</span></div>
+                <div class="word"><span>pesante ↔ leggero</span><span>ثقيل ↔ خفيف</span></div>
+                <div class="word"><span>lungo ↔ corto</span><span>طويل ↔ قصير</span></div>
+                <div class="word"><span>largo ↔ stretto</span><span>واسع ↔ ضيق</span></div>
+                <div class="word"><span>facile ↔ complicato</span><span>سهل ↔ معقد</span></div>
+                <div class="word"><span>rumoroso ↔ silenzioso</span><span>صاخب ↔ هادئ</span></div>
+                <div class="word"><span>calmo ↔ nervoso</span><span>هادئ ↔ عصبي</span></div>
+                <div class="word"><span>gentile ↔ maleducato</span><span>مهذب ↔ سيئ الأدب</span></div>
+                <div class="word"><span>simpatico ↔ antipatico</span><span>لطيف ↔ غير لطيف</span></div>
+                <div class="word"><span>intelligente ↔ stupido</span><span>ذكي ↔ غبي</span></div>
+                <div class="word"><span>generoso ↔ avaro</span><span>كريم ↔ بخيل</span></div>
+                <div class="word"><span>ordinato ↔ disordinato</span><span>مرتب ↔ غير مرتب</span></div>
+                <div class="word"><span>vero ↔ falso</span><span>صحيح / حقيقي ↔ خاطئ / مزيف</span></div>
+                <div class="word"><span>occupato ↔ libero</span><span>مشغول ↔ متفرغ / حر</span></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- 4. IL CORPO UMANO -->
+        <!-- ================================================= -->
+
+        <div class="vocabulary-section" id="corpo">
+
+            <h2>🧍 Il Corpo Umano</h2>
+
+            <div class="word-list">
+
+                <div class="word"><span>la testa</span><span>الرأس</span></div>
+                <div class="word"><span>i capelli</span><span>الشعر</span></div>
+                <div class="word"><span>il viso</span><span>الوجه</span></div>
+                <div class="word"><span>l’occhio</span><span>العين</span></div>
+                <div class="word"><span>l’orecchio</span><span>الأذن</span></div>
+                <div class="word"><span>il naso</span><span>الأنف</span></div>
+                <div class="word"><span>la bocca</span><span>الفم</span></div>
+                <div class="word"><span>il dente</span><span>السن</span></div>
+                <div class="word"><span>la lingua</span><span>اللسان</span></div>
+                <div class="word"><span>il collo</span><span>الرقبة</span></div>
+                <div class="word"><span>la spalla</span><span>الكتف</span></div>
+                <div class="word"><span>il braccio</span><span>الذراع</span></div>
+                <div class="word"><span>il gomito</span><span>المرفق</span></div>
+                <div class="word"><span>la mano</span><span>اليد</span></div>
+                <div class="word"><span>il dito</span><span>الإصبع</span></div>
+                <div class="word"><span>il petto</span><span>الصدر</span></div>
+                <div class="word"><span>la schiena</span><span>الظهر</span></div>
+                <div class="word"><span>la pancia</span><span>البطن</span></div>
+                <div class="word"><span>la gamba</span><span>الساق</span></div>
+                <div class="word"><span>il ginocchio</span><span>الركبة</span></div>
+                <div class="word"><span>il piede</span><span>القدم</span></div>
+                <div class="word"><span>il cuore</span><span>القلب</span></div>
+                <div class="word"><span>il cervello</span><span>الدماغ</span></div>
+                <div class="word"><span>lo stomaco</span><span>المعدة</span></div>
+                <div class="word"><span>il sangue</span><span>الدم</span></div>
+                <div class="word"><span>la pelle</span><span>الجلد</span></div>
+                <div class="word"><span>l’osso</span><span>العظم</span></div>
+                <div class="word"><span>il muscolo</span><span>العضلة</span></div>
+                <div class="word"><span>il polmone</span><span>الرئة</span></div>
+                <div class="word"><span>il fegato</span><span>الكبد</span></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- 5. I TRASPORTI -->
+        <!-- ================================================= -->
+
+        <div class="vocabulary-section" id="trasporti">
+
+            <h2>🚗 I Trasporti</h2>
+
+            <div class="word-list">
+
+                <div class="word"><span>la macchina</span><span>السيارة</span></div>
+                <div class="word"><span>l’autobus</span><span>الحافلة</span></div>
+                <div class="word"><span>il treno</span><span>القطار</span></div>
+                <div class="word"><span>l’aereo</span><span>الطائرة</span></div>
+                <div class="word"><span>la nave</span><span>السفينة</span></div>
+                <div class="word"><span>la barca</span><span>القارب</span></div>
+                <div class="word"><span>il taxi</span><span>سيارة الأجرة</span></div>
+                <div class="word"><span>la moto</span><span>الدراجة النارية</span></div>
+                <div class="word"><span>la bicicletta</span><span>الدراجة الهوائية</span></div>
+                <div class="word"><span>la metropolitana</span><span>مترو الأنفاق</span></div>
+                <div class="word"><span>il tram</span><span>الترامواي</span></div>
+                <div class="word"><span>il camion</span><span>الشاحنة</span></div>
+                <div class="word"><span>il furgone</span><span>الشاحنة الصغيرة / السيارة النفعية</span></div>
+                <div class="word"><span>l’elicottero</span><span>المروحية</span></div>
+                <div class="word"><span>il motorino</span><span>الدراجة النارية الصغيرة / السكوتر</span></div>
+                <div class="word"><span>la nave da crociera</span><span>سفينة الرحلات البحرية</span></div>
+                <div class="word"><span>il traghetto</span><span>العبّارة</span></div>
+                <div class="word"><span>il pullman</span><span>الحافلة السياحية</span></div>
+                <div class="word"><span>il monopattino</span><span>السكوتر</span></div>
+                <div class="word"><span>il taxi</span><span>سيارة الأجرة</span></div>
+                <div class="word"><span>il veicolo</span><span>المركبة</span></div>
+                <div class="word"><span>il camioncino</span><span>الشاحنة الصغيرة</span></div>
+                <div class="word"><span>la funivia</span><span>التلفريك</span></div>
+                <div class="word"><span>la mongolfiera</span><span>المنطاد</span></div>
+                <div class="word"><span>il sottomarino</span><span>الغواصة</span></div>
+                <div class="word"><span>il motorino elettrico</span><span>الدراجة الكهربائية الصغيرة</span></div>
+                <div class="word"><span>il treno ad alta velocità</span><span>قطار السرعة العالية</span></div>
+                <div class="word"><span>la funicolare</span><span>القطار الجبلي المائل</span></div>
+                <div class="word"><span>il battello</span><span>القارب / الباخرة الصغيرة</span></div>
+                <div class="word"><span>il carro</span><span>العربة</span></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- 6. LA NATURA -->
+        <!-- ================================================= -->
+
+        <div class="vocabulary-section" id="natura">
+
+            <h2>🌿 La Natura</h2>
+
+            <div class="word-list">
+
+                <div class="word"><span>la natura</span><span>الطبيعة</span></div>
+                <div class="word"><span>l’albero</span><span>الشجرة</span></div>
+                <div class="word"><span>il fiore</span><span>الزهرة</span></div>
+                <div class="word"><span>l’erba</span><span>العشب</span></div>
+                <div class="word"><span>la foglia</span><span>الورقة</span></div>
+                <div class="word"><span>il ramo</span><span>الغصن</span></div>
+                <div class="word"><span>il tronco</span><span>جذع الشجرة</span></div>
+                <div class="word"><span>la radice</span><span>الجذر</span></div>
+                <div class="word"><span>il seme</span><span>البذرة</span></div>
+                <div class="word"><span>la foresta</span><span>الغابة</span></div>
+                <div class="word"><span>il bosco</span><span>الغابة / الأحراش</span></div>
+                <div class="word"><span>la montagna</span><span>الجبل</span></div>
+                <div class="word"><span>la collina</span><span>التل</span></div>
+                <div class="word"><span>la valle</span><span>الوادي</span></div>
+                <div class="word"><span>il fiume</span><span>النهر</span></div>
+                <div class="word"><span>il lago</span><span>البحيرة</span></div>
+                <div class="word"><span>il mare</span><span>البحر</span></div>
+                <div class="word"><span>l’oceano</span><span>المحيط</span></div>
+                <div class="word"><span>la spiaggia</span><span>الشاطئ</span></div>
+                <div class="word"><span>l’isola</span><span>الجزيرة</span></div>
+                <div class="word"><span>il deserto</span><span>الصحراء</span></div>
+                <div class="word"><span>la terra</span><span>الأرض / التربة</span></div>
+                <div class="word"><span>il cielo</span><span>السماء</span></div>
+                <div class="word"><span>il sole</span><span>الشمس</span></div>
+                <div class="word"><span>la luna</span><span>القمر</span></div>
+                <div class="word"><span>la stella</span><span>النجمة</span></div>
+                <div class="word"><span>la nuvola</span><span>السحابة</span></div>
+                <div class="word"><span>la pioggia</span><span>المطر</span></div>
+                <div class="word"><span>la neve</span><span>الثلج</span></div>
+                <div class="word"><span>il vento</span><span>الرياح</span></div>
+                <div class="word"><span>il fuoco</span><span>النار</span></div>
+                <div class="word"><span>la cascata</span><span>الشلال</span></div>
+                <div class="word"><span>la roccia</span><span>الصخرة</span></div>
+                <div class="word"><span>la pietra</span><span>الحجر</span></div>
+                <div class="word"><span>la sabbia</span><span>الرمال</span></div>
+                <div class="word"><span>l’acqua</span><span>الماء</span></div>
+                <div class="word"><span>l’aria</span><span>الهواء</span></div>
+                <div class="word"><span>il ghiaccio</span><span>الجليد</span></div>
+                <div class="word"><span>la nebbia</span><span>الضباب</span></div>
+                <div class="word"><span>il temporale</span><span>العاصفة الرعدية</span></div>
+                <div class="word"><span>il fulmine</span><span>البرق</span></div>
+                <div class="word"><span>il tuono</span><span>الرعد</span></div>
+                <div class="word"><span>l’arcobaleno</span><span>قوس قزح</span></div>
+                <div class="word"><span>il vulcano</span><span>البركان</span></div>
+                <div class="word"><span>la grotta</span><span>الكهف</span></div>
+                <div class="word"><span>il prato</span><span>المرج / العشب الأخضر</span></div>
+                <div class="word"><span>la campagna</span><span>الريف</span></div>
+                <div class="word"><span>la natura selvaggia</span><span>الطبيعة البرية</span></div>
+                <div class="word"><span>l’ambiente</span><span>البيئة</span></div>
+                <div class="word"><span>il paesaggio</span><span>المنظر الطبيعي / المشهد الطبيعي</span></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- 7. GLI ANIMALI -->
+        <!-- ================================================= -->
+
+        <div class="vocabulary-section" id="animali">
+
+            <h2>🐾 Gli Animali</h2>
+
+            <div class="word-list">
+
+                <div class="word"><span>il cane</span><span>الكلب</span></div>
+                <div class="word"><span>il gatto</span><span>القط</span></div>
+                <div class="word"><span>il cavallo</span><span>الحصان</span></div>
+                <div class="word"><span>la mucca</span><span>البقرة</span></div>
+                <div class="word"><span>la pecora</span><span>الخروف / النعجة</span></div>
+                <div class="word"><span>la capra</span><span>الماعز</span></div>
+                <div class="word"><span>il coniglio</span><span>الأرنب</span></div>
+                <div class="word"><span>il leone</span><span>الأسد</span></div>
+                <div class="word"><span>la tigre</span><span>النمر</span></div>
+                <div class="word"><span>l’elefante</span><span>الفيل</span></div>
+                <div class="word"><span>la giraffa</span><span>الزرافة</span></div>
+                <div class="word"><span>la scimmia</span><span>القرد</span></div>
+                <div class="word"><span>l’orso</span><span>الدب</span></div>
+                <div class="word"><span>il lupo</span><span>الذئب</span></div>
+                <div class="word"><span>la volpe</span><span>الثعلب</span></div>
+                <div class="word"><span>il cervo</span><span>الغزال / الأيل</span></div>
+                <div class="word"><span>la zebra</span><span>الحمار الوحشي</span></div>
+                <div class="word"><span>il cammello</span><span>الجمل</span></div>
+                <div class="word"><span>il delfino</span><span>الدلفين</span></div>
+                <div class="word"><span>la balena</span><span>الحوت</span></div>
+                <div class="word"><span>lo squalo</span><span>القرش</span></div>
+                <div class="word"><span>il pesce</span><span>السمك</span></div>
+                <div class="word"><span>l’aquila</span><span>النسر</span></div>
+                <div class="word"><span>il gufo</span><span>البومة</span></div>
+                <div class="word"><span>il pappagallo</span><span>الببغاء</span></div>
+                <div class="word"><span>il serpente</span><span>الثعبان</span></div>
+                <div class="word"><span>la tartaruga</span><span>السلحفاة</span></div>
+                <div class="word"><span>la rana</span><span>الضفدع</span></div>
+                <div class="word"><span>il coccodrillo</span><span>التمساح</span></div>
+                <div class="word"><span>la farfalla</span><span>الفراشة</span></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- 8. LA CASA -->
+        <!-- ================================================= -->
+
+        <div class="vocabulary-section" id="casa">
+
+            <h2>🏠 La Casa</h2>
+
+            <div class="word-list">
+
+                <div class="word"><span>la casa</span><span>المنزل / البيت</span></div>
+                <div class="word"><span>la stanza</span><span>الغرفة</span></div>
+                <div class="word"><span>il soggiorno</span><span>غرفة المعيشة</span></div>
+                <div class="word"><span>la camera da letto</span><span>غرفة النوم</span></div>
+                <div class="word"><span>la cucina</span><span>المطبخ</span></div>
+                <div class="word"><span>il bagno</span><span>الحمّام</span></div>
+                <div class="word"><span>il salotto</span><span>غرفة الجلوس</span></div>
+                <div class="word"><span>la sala da pranzo</span><span>غرفة الطعام</span></div>
+                <div class="word"><span>il corridoio</span><span>الممر</span></div>
+                <div class="word"><span>l’ingresso</span><span>المدخل</span></div>
+                <div class="word"><span>il balcone</span><span>الشرفة</span></div>
+                <div class="word"><span>la terrazza</span><span>التراس / الشرفة الكبيرة</span></div>
+                <div class="word"><span>il giardino</span><span>الحديقة</span></div>
+                <div class="word"><span>il garage</span><span>المرآب</span></div>
+                <div class="word"><span>il tetto</span><span>السطح / سقف المنزل</span></div>
+                <div class="word"><span>il muro</span><span>الجدار</span></div>
+                <div class="word"><span>il pavimento</span><span>الأرضية</span></div>
+                <div class="word"><span>il soffitto</span><span>السقف الداخلي</span></div>
+                <div class="word"><span>la porta</span><span>الباب</span></div>
+                <div class="word"><span>la finestra</span><span>النافذة</span></div>
+                <div class="word"><span>la scala</span><span>الدرج</span></div>
+                <div class="word"><span>l’ascensore</span><span>المصعد</span></div>
+                <div class="word"><span>il letto</span><span>السرير</span></div>
+                <div class="word"><span>il cuscino</span><span>الوسادة</span></div>
+                <div class="word"><span>la coperta</span><span>البطانية</span></div>
+                <div class="word"><span>l’armadio</span><span>الخزانة</span></div>
+                <div class="word"><span>il comodino</span><span>طاولة بجانب السرير</span></div>
+                <div class="word"><span>la scrivania</span><span>المكتب</span></div>
+                <div class="word"><span>la sedia</span><span>الكرسي</span></div>
+                <div class="word"><span>il tavolo</span><span>الطاولة</span></div>
+                <div class="word"><span>il divano</span><span>الأريكة</span></div>
+                <div class="word"><span>la poltrona</span><span>الكرسي ذو الذراعين</span></div>
+                <div class="word"><span>il tappeto</span><span>السجادة</span></div>
+                <div class="word"><span>la lampada</span><span>المصباح</span></div>
+                <div class="word"><span>lo specchio</span><span>المرآة</span></div>
+                <div class="word"><span>la tenda</span><span>الستارة</span></div>
+                <div class="word"><span>il frigorifero</span><span>الثلاجة</span></div>
+                <div class="word"><span>il forno</span><span>الفرن</span></div>
+                <div class="word"><span>il fornello</span><span>موقد الطبخ</span></div>
+                <div class="word"><span>il lavandino</span><span>حوض الغسيل</span></div>
+                <div class="word"><span>la doccia</span><span>الدوش / الاستحمام</span></div>
+                <div class="word"><span>la vasca da bagno</span><span>حوض الاستحمام</span></div>
+                <div class="word"><span>il water</span><span>المرحاض</span></div>
+                <div class="word"><span>la lavatrice</span><span>غسالة الملابس</span></div>
+                <div class="word"><span>la lavastoviglie</span><span>غسالة الصحون</span></div>
+                <div class="word"><span>il televisore</span><span>التلفاز</span></div>
+                <div class="word"><span>il ventilatore</span><span>المروحة</span></div>
+                <div class="word"><span>il riscaldamento</span><span>التدفئة</span></div>
+                <div class="word"><span>il condizionatore</span><span>مكيف الهواء</span></div>
+                <div class="word"><span>la chiave</span><span>المفتاح</span></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- 9. QUALITÀ, SENTIMENTI... -->
+        <!-- ================================================= -->
+
+        <div class="vocabulary-section" id="qualita">
+
+            <h2>💎 Qualità, sentimenti e caratteristiche personali</h2>
+
+            <div class="word-list">
+
+                <div class="word"><span>la fiducia</span><span>الثقة</span></div>
+                <div class="word"><span>il rispetto</span><span>الاحترام</span></div>
+                <div class="word"><span>la pazienza</span><span>الصبر</span></div>
+                <div class="word"><span>il coraggio</span><span>الشجاعة</span></div>
+                <div class="word"><span>la gentilezza</span><span>اللطف</span></div>
+                <div class="word"><span>l’onestà</span><span>الأمانة / النزاهة</span></div>
+                <div class="word"><span>la sincerità</span><span>الصدق</span></div>
+                <div class="word"><span>la responsabilità</span><span>المسؤولية</span></div>
+                <div class="word"><span>la determinazione</span><span>العزيمة / الإصرار</span></div>
+                <div class="word"><span>la motivazione</span><span>التحفيز / الدافع</span></div>
+                <div class="word"><span>l’ambizione</span><span>الطموح</span></div>
+                <div class="word"><span>la generosità</span><span>الكرم</span></div>
+                <div class="word"><span>l’intelligenza</span><span>الذكاء</span></div>
+                <div class="word"><span>la creatività</span><span>الإبداع</span></div>
+                <div class="word"><span>la curiosità</span><span>الفضول</span></div>
+                <div class="word"><span>la disciplina</span><span>الانضباط</span></div>
+                <div class="word"><span>la concentrazione</span><span>التركيز</span></div>
+                <div class="word"><span>la saggezza</span><span>الحكمة</span></div>
+                <div class="word"><span>la forza</span><span>القوة</span></div>
+                <div class="word"><span>la calma</span><span>الهدوء</span></div>
+                <div class="word"><span>la felicità</span><span>السعادة</span></div>
+                <div class="word"><span>la tristezza</span><span>الحزن</span></div>
+                <div class="word"><span>la paura</span><span>الخوف</span></div>
+                <div class="word"><span>la rabbia</span><span>الغضب</span></div>
+                <div class="word"><span>l’amore</span><span>الحب</span></div>
+                <div class="word"><span>la speranza</span><span>الأمل</span></div>
+                <div class="word"><span>la fiducia in sé</span><span>الثقة بالنفس</span></div>
+                <div class="word"><span>la vergogna</span><span>الخجل / العار</span></div>
+                <div class="word"><span>la sorpresa</span><span>المفاجأة / الدهشة</span></div>
+                <div class="word"><span>la gioia</span><span>الفرح</span></div>
+                <div class="word"><span>la simpatia</span><span>الود / اللطف</span></div>
+                <div class="word"><span>l’empatia</span><span>التعاطف</span></div>
+                <div class="word"><span>la disponibilità</span><span>الاستعداد للمساعدة</span></div>
+                <div class="word"><span>la collaborazione</span><span>التعاون</span></div>
+                <div class="word"><span>l’impegno</span><span>الالتزام / الجهد</span></div>
+                <div class="word"><span>la lealtà</span><span>الوفاء / الإخلاص</span></div>
+                <div class="word"><span>la comprensione</span><span>التفهّم</span></div>
+                <div class="word"><span>la tolleranza</span><span>التسامح</span></div>
+                <div class="word"><span>la modestia</span><span>التواضع</span></div>
+                <div class="word"><span>l’ottimismo</span><span>التفاؤل</span></div>
+                <div class="word"><span>il pessimismo</span><span>التشاؤم</span></div>
+                <div class="word"><span>la leadership</span><span>القيادة</span></div>
+                <div class="word"><span>l’esperienza</span><span>الخبرة / التجربة</span></div>
+                <div class="word"><span>la conoscenza</span><span>المعرفة</span></div>
+                <div class="word"><span>il successo</span><span>النجاح</span></div>
+                <div class="word"><span>il desiderio</span><span>الرغبة</span></div>
+                <div class="word"><span>il sogno</span><span>الحلم</span></div>
+                <div class="word"><span>l’obiettivo</span><span>الهدف</span></div>
+                <div class="word"><span>la qualità</span><span>الجودة / الصفة</span></div>
+                <div class="word"><span>il carattere</span><span>الشخصية / الطبع</span></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- 10. LA STRADA -->
+        <!-- ================================================= -->
+
+        <div class="vocabulary-section" id="strada">
+
+            <h2>🚶‍♂️ La Strada</h2>
+
+            <div class="word-list">
+
+                <div class="word"><span>la strada</span><span>الشارع / الطريق</span></div>
+                <div class="word"><span>la via</span><span>الشارع / الطريق</span></div>
+                <div class="word"><span>il marciapiede</span><span>الرصيف</span></div>
+                <div class="word"><span>la strada principale</span><span>الطريق الرئيسي</span></div>
+                <div class="word"><span>la strada secondaria</span><span>الطريق الفرعي</span></div>
+                <div class="word"><span>l’incrocio</span><span>التقاطع</span></div>
+                <div class="word"><span>il semaforo</span><span>إشارة المرور</span></div>
+                <div class="word"><span>il cartello stradale</span><span>لافتة المرور</span></div>
+                <div class="word"><span>il segnale stradale</span><span>علامة المرور</span></div>
+                <div class="word"><span>le strisce pedonali</span><span>ممر المشاة</span></div>
+                <div class="word"><span>la rotonda</span><span>الدوّار / الطريق الدائري</span></div>
+                <div class="word"><span>il parcheggio</span><span>موقف السيارات</span></div>
+                <div class="word"><span>il posto auto</span><span>مكان ركن السيارة</span></div>
+                <div class="word"><span>la fermata dell’autobus</span><span>موقف الحافلة</span></div>
+                <div class="word"><span>la stazione</span><span>المحطة</span></div>
+                <div class="word"><span>il distributore di benzina</span><span>محطة الوقود</span></div>
+                <div class="word"><span>il benzinaio</span><span>عامل محطة الوقود</span></div>
+                <div class="word"><span>il negozio</span><span>المتجر</span></div>
+                <div class="word"><span>il supermercato</span><span>متجر كبير / سوبرماركت</span></div>
+                <div class="word"><span>la farmacia</span><span>الصيدلية</span></div>
+                <div class="word"><span>la banca</span><span>البنك</span></div>
+                <div class="word"><span>la scuola</span><span>المدرسة</span></div>
+                <div class="word"><span>l’ospedale</span><span>المستشفى</span></div>
+                <div class="word"><span>il ristorante</span><span>المطعم</span></div>
+                <div class="word"><span>il bar</span><span>المقهى</span></div>
+                <div class="word"><span>il marciapiede</span><span>الرصيف</span></div>
+                <div class="word"><span>il passaggio pedonale</span><span>ممر المشاة</span></div>
+                <div class="word"><span>il lampione</span><span>عمود إنارة الشارع</span></div>
+                <div class="word"><span>il semaforo pedonale</span><span>إشارة مرور المشاة</span></div>
+                <div class="word"><span>la pista ciclabile</span><span>مسار الدراجات</span></div>
+                <div class="word"><span>il ponte</span><span>الجسر</span></div>
+                <div class="word"><span>il tunnel</span><span>النفق</span></div>
+                <div class="word"><span>il cavalcavia</span><span>الجسر العلوي</span></div>
+                <div class="word"><span>la fontana</span><span>النافورة</span></div>
+                <div class="word"><span>la piazza</span><span>الساحة</span></div>
+                <div class="word"><span>il parco</span><span>الحديقة العامة</span></div>
+                <div class="word"><span>il giardino pubblico</span><span>الحديقة العامة</span></div>
+                <div class="word"><span>il monumento</span><span>النصب التذكاري</span></div>
+                <div class="word"><span>il palazzo</span><span>المبنى / العمارة</span></div>
+                <div class="word"><span>l’edificio</span><span>المبنى</span></div>
+                <div class="word"><span>la casa</span><span>المنزل</span></div>
+                <div class="word"><span>l’appartamento</span><span>الشقة</span></div>
+                <div class="word"><span>il quartiere</span><span>الحي</span></div>
+                <div class="word"><span>il centro</span><span>وسط المدينة</span></div>
+                <div class="word"><span>la periferia</span><span>الضواحي</span></div>
+                <div class="word"><span>il traffico</span><span>حركة المرور / الازدحام</span></div>
+                <div class="word"><span>l’auto</span><span>السيارة</span></div>
+                <div class="word"><span>l’autobus</span><span>الحافلة</span></div>
+                <div class="word"><span>il pedone</span><span>المشاة</span></div>
+                <div class="word"><span>il conducente</span><span>السائق</span></div>
+
+            </div>
+
+        </div>
+
+
+        <footer>
+            🇮🇹 Impara l'italiano • Impara ogni giorno una nuova parola
+        </footer>
+
+    </div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- JAVASCRIPT -->
+<!-- ================================================= -->
+
+<script>
+
+function toggleSection(sectionId, buttonId, openText, closeText) {
+
+    const section =
+        document.getElementById(sectionId);
+
+    const button =
+        document.getElementById(buttonId);
+
+
+    section.classList.toggle("show");
+
+
+    if (section.classList.contains("show")) {
+
+        button.innerHTML = closeText;
+
+
+        setTimeout(() => {
+
+            section.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }, 100);
+
+    } else {
+
+        button.innerHTML = openText;
+
+    }
+
+}
+
+</script>
+
+
+</body>
+</html>
