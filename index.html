@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,6 @@
     <title>Italian Vocabulary</title>
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -48,11 +47,9 @@
             -webkit-backdrop-filter: blur(12px);
 
             border-radius: 25px;
-
             padding: 45px 35px;
 
-            box-shadow:
-                0 20px 50px rgba(0,0,0,.35);
+            box-shadow: 0 20px 50px rgba(0,0,0,.35);
 
             text-align: center;
         }
@@ -69,8 +66,6 @@
             margin-bottom: 35px;
         }
 
-        /* BUTTONS */
-
         .buttons {
             display: flex;
             justify-content: center;
@@ -81,9 +76,7 @@
 
         button {
             border: none;
-
             padding: 15px 25px;
-
             border-radius: 50px;
 
             font-size: 17px;
@@ -96,22 +89,17 @@
 
             transition: all .3s ease;
 
-            box-shadow:
-                0 8px 20px rgba(0,0,0,.2);
+            box-shadow: 0 8px 20px rgba(0,0,0,.2);
         }
 
         button:hover {
             transform: translateY(-4px);
-
-            box-shadow:
-                0 12px 25px rgba(0,0,0,.3);
+            box-shadow: 0 12px 25px rgba(0,0,0,.3);
         }
 
         button:active {
             transform: scale(.97);
         }
-
-        /* VOCABULARY SECTIONS */
 
         .vocabulary-section {
             display: none;
@@ -121,7 +109,6 @@
             background: rgba(255,255,255,.85);
 
             border-radius: 20px;
-
             padding: 30px;
 
             text-align: left;
@@ -135,28 +122,21 @@
 
         .vocabulary-section h2 {
             text-align: center;
-
             margin-bottom: 25px;
 
             font-size: 30px;
-
             color: #222;
         }
 
         .word-list {
             display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
+            grid-template-columns: repeat(2, 1fr);
             gap: 12px;
         }
 
         .word {
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
 
             gap: 15px;
@@ -167,55 +147,56 @@
 
             border-radius: 12px;
 
-            box-shadow:
-                0 4px 12px rgba(0,0,0,.08);
+            box-shadow: 0 4px 12px rgba(0,0,0,.08);
 
             transition: all .25s ease;
         }
 
         .word:hover {
             transform: translateY(-3px);
-
-            box-shadow:
-                0 8px 18px rgba(0,0,0,.15);
+            box-shadow: 0 8px 18px rgba(0,0,0,.15);
         }
 
         .word span:first-child {
             font-weight: bold;
-
             color: #222;
-
             font-size: 16px;
         }
 
         .word span:last-child {
             color: #555;
-
             direction: rtl;
-
             text-align: right;
-
             font-size: 15px;
         }
 
-        /* FOOTER */
+        /* Close button at the bottom of every category */
+        .close-category {
+            display: block;
+            margin: 30px auto 0;
+
+            background: #444;
+            color: white;
+
+            padding: 12px 25px;
+            border-radius: 50px;
+
+            font-size: 16px;
+        }
+
+        .close-category:hover {
+            background: #222;
+        }
 
         footer {
             margin-top: 30px;
-
             color: white;
-
             text-align: center;
-
             font-size: 14px;
-
             opacity: .9;
         }
 
-        /* ANIMATION */
-
         @keyframes fadeIn {
-
             from {
                 opacity: 0;
                 transform: translateY(15px);
@@ -225,10 +206,7 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-
         }
-
-        /* TABLET */
 
         @media (max-width: 750px) {
 
@@ -243,10 +221,7 @@
             .main-card {
                 padding: 35px 20px;
             }
-
         }
-
-        /* MOBILE */
 
         @media (max-width: 500px) {
 
@@ -288,15 +263,11 @@
             .word span:last-child {
                 width: 100%;
             }
-
         }
-
     </style>
 </head>
 
-
 <body>
-
 
 <div class="container">
 
@@ -315,8 +286,6 @@
 
         <div class="buttons">
 
-            <!-- 1. FAMILY -->
-
             <button
                 id="familyBtn"
                 onclick="toggleSection(
@@ -325,13 +294,9 @@
                     '👨‍👩‍👧‍👦 La Famiglia',
                     '✖ Nascondi La Famiglia'
                 )">
-
                 👨‍👩‍👧‍👦 La Famiglia
-
             </button>
 
-
-            <!-- 2. COLORS -->
 
             <button
                 id="colorsBtn"
@@ -341,13 +306,9 @@
                     '🎨 I Colori',
                     '✖ Nascondi I Colori'
                 )">
-
                 🎨 I Colori
-
             </button>
 
-
-            <!-- 3. ADJECTIVES -->
 
             <button
                 id="aggettiviBtn"
@@ -357,13 +318,9 @@
                     '📝 Gli Aggettivi',
                     '✖ Nascondi Gli Aggettivi'
                 )">
-
                 📝 Gli Aggettivi
-
             </button>
 
-
-            <!-- 4. HUMAN BODY -->
 
             <button
                 id="corpoBtn"
@@ -373,13 +330,9 @@
                     '🧍 Il Corpo Umano',
                     '✖ Nascondi Il Corpo Umano'
                 )">
-
                 🧍 Il Corpo Umano
-
             </button>
 
-
-            <!-- 5. TRANSPORT -->
 
             <button
                 id="trasportiBtn"
@@ -389,13 +342,9 @@
                     '🚗 I Trasporti',
                     '✖ Nascondi I Trasporti'
                 )">
-
                 🚗 I Trasporti
-
             </button>
 
-
-            <!-- 6. NATURE -->
 
             <button
                 id="naturaBtn"
@@ -405,13 +354,9 @@
                     '🌿 La Natura',
                     '✖ Nascondi La Natura'
                 )">
-
                 🌿 La Natura
-
             </button>
 
-
-            <!-- 7. ANIMALS -->
 
             <button
                 id="animaliBtn"
@@ -421,13 +366,9 @@
                     '🐾 Gli Animali',
                     '✖ Nascondi Gli Animali'
                 )">
-
                 🐾 Gli Animali
-
             </button>
 
-
-            <!-- 8. HOUSE -->
 
             <button
                 id="casaBtn"
@@ -437,13 +378,9 @@
                     '🏠 La Casa',
                     '✖ Nascondi La Casa'
                 )">
-
                 🏠 La Casa
-
             </button>
 
-
-            <!-- 9. QUALITIES -->
 
             <button
                 id="qualitaBtn"
@@ -453,13 +390,9 @@
                     '💎 Qualità, sentimenti e caratteristiche personali',
                     '✖ Nascondi Qualità, sentimenti e caratteristiche personali'
                 )">
-
                 💎 Qualità, sentimenti e caratteristiche personali
-
             </button>
 
-
-            <!-- 10. STREET -->
 
             <button
                 id="stradaBtn"
@@ -469,9 +402,43 @@
                     '🚶‍♂️ La Strada',
                     '✖ Nascondi La Strada'
                 )">
-
                 🚶‍♂️ La Strada
+            </button>
 
+
+            <button
+                id="vestitiBtn"
+                onclick="toggleSection(
+                    'vestiti',
+                    'vestitiBtn',
+                    '👕 I Vestiti',
+                    '✖ Nascondi I Vestiti'
+                )">
+                👕 I Vestiti
+            </button>
+
+
+            <button
+                id="ciboBtn"
+                onclick="toggleSection(
+                    'cibo',
+                    'ciboBtn',
+                    '🍽️ Il Cibo',
+                    '✖ Nascondi Il Cibo'
+                )">
+                🍽️ Il Cibo
+            </button>
+
+
+            <button
+                id="cucinaBtn"
+                onclick="toggleSection(
+                    'cucina',
+                    'cucinaBtn',
+                    '🍳 La Cucina',
+                    '✖ Nascondi La Cucina'
+                )">
+                🍳 La Cucina
             </button>
 
         </div>
@@ -520,6 +487,11 @@
 
             </div>
 
+            <button class="close-category"
+                onclick="toggleSection('famiglia','familyBtn','👨‍👩‍👧‍👦 La Famiglia','✖ Nascondi La Famiglia')">
+                ✖ Chiudi La Famiglia
+            </button>
+
         </div>
 
 
@@ -550,6 +522,11 @@
                 <div class="word"><span>il dorato</span><span>الذهبي</span></div>
 
             </div>
+
+            <button class="close-category"
+                onclick="toggleSection('colori','colorsBtn','🎨 I Colori','✖ Nascondi I Colori')">
+                ✖ Chiudi I Colori
+            </button>
 
         </div>
 
@@ -597,6 +574,11 @@
 
             </div>
 
+            <button class="close-category"
+                onclick="toggleSection('aggettivi','aggettiviBtn','📝 Gli Aggettivi','✖ Nascondi Gli Aggettivi')">
+                ✖ Chiudi Gli Aggettivi
+            </button>
+
         </div>
 
 
@@ -643,6 +625,11 @@
 
             </div>
 
+            <button class="close-category"
+                onclick="toggleSection('corpo','corpoBtn','🧍 Il Corpo Umano','✖ Nascondi Il Corpo Umano')">
+                ✖ Chiudi Il Corpo Umano
+            </button>
+
         </div>
 
 
@@ -688,6 +675,11 @@
                 <div class="word"><span>il carro</span><span>العربة</span></div>
 
             </div>
+
+            <button class="close-category"
+                onclick="toggleSection('trasporti','trasportiBtn','🚗 I Trasporti','✖ Nascondi I Trasporti')">
+                ✖ Chiudi I Trasporti
+            </button>
 
         </div>
 
@@ -755,6 +747,11 @@
 
             </div>
 
+            <button class="close-category"
+                onclick="toggleSection('natura','naturaBtn','🌿 La Natura','✖ Nascondi La Natura')">
+                ✖ Chiudi La Natura
+            </button>
+
         </div>
 
 
@@ -800,6 +797,11 @@
                 <div class="word"><span>la farfalla</span><span>الفراشة</span></div>
 
             </div>
+
+            <button class="close-category"
+                onclick="toggleSection('animali','animaliBtn','🐾 Gli Animali','✖ Nascondi Gli Animali')">
+                ✖ Chiudi Gli Animali
+            </button>
 
         </div>
 
@@ -867,11 +869,16 @@
 
             </div>
 
+            <button class="close-category"
+                onclick="toggleSection('casa','casaBtn','🏠 La Casa','✖ Nascondi La Casa')">
+                ✖ Chiudi La Casa
+            </button>
+
         </div>
 
 
         <!-- ================================================= -->
-        <!-- 9. QUALITÀ, SENTIMENTI... -->
+        <!-- 9. QUALITÀ -->
         <!-- ================================================= -->
 
         <div class="vocabulary-section" id="qualita">
@@ -932,6 +939,11 @@
                 <div class="word"><span>il carattere</span><span>الشخصية / الطبع</span></div>
 
             </div>
+
+            <button class="close-category"
+                onclick="toggleSection('qualita','qualitaBtn','💎 Qualità, sentimenti e caratteristiche personali','✖ Nascondi Qualità, sentimenti e caratteristiche personali')">
+                ✖ Chiudi Qualità
+            </button>
 
         </div>
 
@@ -999,11 +1011,245 @@
 
             </div>
 
+            <button class="close-category"
+                onclick="toggleSection('strada','stradaBtn','🚶‍♂️ La Strada','✖ Nascondi La Strada')">
+                ✖ Chiudi La Strada
+            </button>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- 11. I VESTITI -->
+        <!-- ================================================= -->
+
+        <div class="vocabulary-section" id="vestiti">
+
+            <h2>👕 I Vestiti</h2>
+
+            <div class="word-list">
+
+                <div class="word"><span>la camicia</span><span>القميص</span></div>
+                <div class="word"><span>la maglietta</span><span>القميص الخفيف / تيشيرت</span></div>
+                <div class="word"><span>i pantaloni</span><span>السروال / البنطال</span></div>
+                <div class="word"><span>i jeans</span><span>الجينز</span></div>
+                <div class="word"><span>i pantaloncini</span><span>السروال القصير</span></div>
+                <div class="word"><span>la gonna</span><span>التنورة</span></div>
+                <div class="word"><span>il vestito</span><span>الفستان / اللباس</span></div>
+                <div class="word"><span>la giacca</span><span>السترة / الجاكيت</span></div>
+                <div class="word"><span>il cappotto</span><span>المعطف</span></div>
+                <div class="word"><span>il giubbotto</span><span>السترة الشتوية / الجاكيت</span></div>
+                <div class="word"><span>il maglione</span><span>السترة الصوفية</span></div>
+                <div class="word"><span>la felpa</span><span>سترة رياضية</span></div>
+                <div class="word"><span>il completo</span><span>البدلة / الطقم</span></div>
+                <div class="word"><span>la cravatta</span><span>ربطة العنق</span></div>
+                <div class="word"><span>la cintura</span><span>الحزام</span></div>
+                <div class="word"><span>la sciarpa</span><span>الوشاح</span></div>
+                <div class="word"><span>il cappello</span><span>القبعة</span></div>
+                <div class="word"><span>il berretto</span><span>قبعة صوفية</span></div>
+                <div class="word"><span>i guanti</span><span>القفازات</span></div>
+                <div class="word"><span>i calzini</span><span>الجوارب</span></div>
+                <div class="word"><span>le calze</span><span>الجوارب النسائية</span></div>
+                <div class="word"><span>le scarpe</span><span>الأحذية</span></div>
+                <div class="word"><span>gli stivali</span><span>الأحذية الطويلة</span></div>
+                <div class="word"><span>le scarpe da ginnastica</span><span>الأحذية الرياضية</span></div>
+                <div class="word"><span>i sandali</span><span>الصنادل</span></div>
+                <div class="word"><span>le pantofole</span><span>النعال المنزلية</span></div>
+                <div class="word"><span>il pigiama</span><span>لباس النوم</span></div>
+                <div class="word"><span>la biancheria intima</span><span>الملابس الداخلية</span></div>
+                <div class="word"><span>le mutande</span><span>السروال الداخلي</span></div>
+                <div class="word"><span>il reggiseno</span><span>حمالة الصدر</span></div>
+                <div class="word"><span>il costume da bagno</span><span>لباس السباحة</span></div>
+                <div class="word"><span>il bikini</span><span>البيكيني</span></div>
+                <div class="word"><span>la tuta</span><span>البدلة الرياضية</span></div>
+                <div class="word"><span>il grembiule</span><span>المئزر</span></div>
+                <div class="word"><span>l’impermeabile</span><span>معطف المطر</span></div>
+                <div class="word"><span>il cappuccio</span><span>غطاء الرأس / قبعة السترة</span></div>
+                <div class="word"><span>la tasca</span><span>الجيب</span></div>
+                <div class="word"><span>il bottone</span><span>الزر</span></div>
+                <div class="word"><span>la cerniera</span><span>السحّاب</span></div>
+                <div class="word"><span>il tessuto</span><span>القماش</span></div>
+                <div class="word"><span>la lana</span><span>الصوف</span></div>
+                <div class="word"><span>il cotone</span><span>القطن</span></div>
+                <div class="word"><span>la seta</span><span>الحرير</span></div>
+                <div class="word"><span>la taglia</span><span>المقاس</span></div>
+                <div class="word"><span>la moda</span><span>الموضة</span></div>
+                <div class="word"><span>l’abbigliamento</span><span>الملابس / الألبسة</span></div>
+
+            </div>
+
+            <button class="close-category"
+                onclick="toggleSection('vestiti','vestitiBtn','👕 I Vestiti','✖ Nascondi I Vestiti')">
+                ✖ Chiudi I Vestiti
+            </button>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- 12. IL CIBO -->
+        <!-- ================================================= -->
+
+        <div class="vocabulary-section" id="cibo">
+
+            <h2>🍽️ Il Cibo</h2>
+
+            <div class="word-list">
+
+                <div class="word"><span>il pane</span><span>الخبز</span></div>
+                <div class="word"><span>il riso</span><span>الأرز</span></div>
+                <div class="word"><span>la pasta</span><span>المعكرونة</span></div>
+                <div class="word"><span>la carne</span><span>اللحم</span></div>
+                <div class="word"><span>il pollo</span><span>الدجاج</span></div>
+                <div class="word"><span>il pesce</span><span>السمك</span></div>
+                <div class="word"><span>l’uovo</span><span>البيضة</span></div>
+                <div class="word"><span>il latte</span><span>الحليب</span></div>
+                <div class="word"><span>il formaggio</span><span>الجبن</span></div>
+                <div class="word"><span>lo yogurt</span><span>الزبادي</span></div>
+                <div class="word"><span>il burro</span><span>الزبدة</span></div>
+                <div class="word"><span>l’olio</span><span>الزيت</span></div>
+                <div class="word"><span>il sale</span><span>الملح</span></div>
+                <div class="word"><span>lo zucchero</span><span>السكر</span></div>
+                <div class="word"><span>il miele</span><span>العسل</span></div>
+                <div class="word"><span>la farina</span><span>الدقيق</span></div>
+                <div class="word"><span>la patata</span><span>البطاطا</span></div>
+                <div class="word"><span>il pomodoro</span><span>الطماطم</span></div>
+                <div class="word"><span>la carota</span><span>الجزر</span></div>
+                <div class="word"><span>la cipolla</span><span>البصل</span></div>
+                <div class="word"><span>l’aglio</span><span>الثوم</span></div>
+                <div class="word"><span>la lattuga</span><span>الخس</span></div>
+                <div class="word"><span>il cetriolo</span><span>الخيار</span></div>
+                <div class="word"><span>il peperone</span><span>الفلفل الحلو</span></div>
+                <div class="word"><span>il fagiolo</span><span>الفاصولياء</span></div>
+                <div class="word"><span>il pisello</span><span>البازلاء</span></div>
+                <div class="word"><span>la mela</span><span>التفاحة</span></div>
+                <div class="word"><span>la banana</span><span>الموز</span></div>
+                <div class="word"><span>l’arancia</span><span>البرتقال</span></div>
+                <div class="word"><span>il limone</span><span>الليمون</span></div>
+                <div class="word"><span>la fragola</span><span>الفراولة</span></div>
+                <div class="word"><span>l’uva</span><span>العنب</span></div>
+                <div class="word"><span>l’anguria</span><span>البطيخ</span></div>
+                <div class="word"><span>la pesca</span><span>الخوخ</span></div>
+                <div class="word"><span>la pera</span><span>الإجاص</span></div>
+                <div class="word"><span>il melone</span><span>الشمام</span></div>
+                <div class="word"><span>il dolce</span><span>الحلوى</span></div>
+                <div class="word"><span>il cioccolato</span><span>الشوكولاتة</span></div>
+                <div class="word"><span>il biscotto</span><span>البسكويت</span></div>
+                <div class="word"><span>il gelato</span><span>المثلجات / الآيس كريم</span></div>
+                <div class="word"><span>la torta</span><span>الكعكة</span></div>
+                <div class="word"><span>la pizza</span><span>البيتزا</span></div>
+                <div class="word"><span>il panino</span><span>الساندويتش</span></div>
+                <div class="word"><span>la zuppa</span><span>الحساء</span></div>
+                <div class="word"><span>l’insalata</span><span>السلطة</span></div>
+                <div class="word"><span>la salsa</span><span>الصلصة</span></div>
+                <div class="word"><span>il succo</span><span>العصير</span></div>
+                <div class="word"><span>l’acqua</span><span>الماء</span></div>
+                <div class="word"><span>il caffè</span><span>القهوة</span></div>
+                <div class="word"><span>il tè</span><span>الشاي</span></div>
+                <div class="word"><span>la carne di manzo</span><span>لحم البقر</span></div>
+                <div class="word"><span>la carne di agnello</span><span>لحم الخروف</span></div>
+                <div class="word"><span>il prosciutto</span><span>لحم الخنزير المقدد / الجامبون</span></div>
+                <div class="word"><span>il tonno</span><span>التونة</span></div>
+                <div class="word"><span>i gamberi</span><span>القريدس / الجمبري</span></div>
+                <div class="word"><span>le lenticchie</span><span>العدس</span></div>
+                <div class="word"><span>i ceci</span><span>الحمص</span></div>
+                <div class="word"><span>le olive</span><span>الزيتون</span></div>
+                <div class="word"><span>le mandorle</span><span>اللوز</span></div>
+                <div class="word"><span>le noci</span><span>الجوز</span></div>
+                <div class="word"><span>le arachidi</span><span>الفول السوداني</span></div>
+                <div class="word"><span>i funghi</span><span>الفطر</span></div>
+                <div class="word"><span>il mais</span><span>الذرة</span></div>
+                <div class="word"><span>la melanzana</span><span>الباذنجان</span></div>
+                <div class="word"><span>la zucchina</span><span>الكوسة</span></div>
+                <div class="word"><span>gli spinaci</span><span>السبانخ</span></div>
+                <div class="word"><span>il cavolo</span><span>الملفوف</span></div>
+                <div class="word"><span>il peperoncino</span><span>الفلفل الحار</span></div>
+                <div class="word"><span>la marmellata</span><span>المربى</span></div>
+                <div class="word"><span>la crema</span><span>الكريمة / القشدة</span></div>
+
+            </div>
+
+            <button class="close-category"
+                onclick="toggleSection('cibo','ciboBtn','🍽️ Il Cibo','✖ Nascondi Il Cibo')">
+                ✖ Chiudi Il Cibo
+            </button>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- 13. LA CUCINA -->
+        <!-- ================================================= -->
+
+        <div class="vocabulary-section" id="cucina">
+
+            <h2>🍳 La Cucina</h2>
+
+            <div class="word-list">
+
+                <div class="word"><span>la cucina</span><span>المطبخ</span></div>
+                <div class="word"><span>il frigorifero</span><span>الثلاجة</span></div>
+                <div class="word"><span>il congelatore</span><span>الفريزر / المجمد</span></div>
+                <div class="word"><span>il forno</span><span>الفرن</span></div>
+                <div class="word"><span>il fornello</span><span>موقد الطبخ</span></div>
+                <div class="word"><span>il microonde</span><span>الميكروويف</span></div>
+                <div class="word"><span>il lavandino</span><span>حوض المطبخ</span></div>
+                <div class="word"><span>il rubinetto</span><span>صنبور الماء</span></div>
+                <div class="word"><span>il tavolo</span><span>الطاولة</span></div>
+                <div class="word"><span>la sedia</span><span>الكرسي</span></div>
+                <div class="word"><span>l’armadio</span><span>خزانة</span></div>
+                <div class="word"><span>il cassetto</span><span>الدرج</span></div>
+                <div class="word"><span>lo scaffale</span><span>الرف</span></div>
+                <div class="word"><span>il piano di lavoro</span><span>سطح العمل</span></div>
+                <div class="word"><span>la pentola</span><span>القدر</span></div>
+                <div class="word"><span>la padella</span><span>المقلاة</span></div>
+                <div class="word"><span>il coperchio</span><span>الغطاء</span></div>
+                <div class="word"><span>il piatto</span><span>الصحن</span></div>
+                <div class="word"><span>la ciotola</span><span>الوعاء</span></div>
+                <div class="word"><span>il bicchiere</span><span>الكأس</span></div>
+                <div class="word"><span>la tazza</span><span>الفنجان / الكوب</span></div>
+                <div class="word"><span>la bottiglia</span><span>القارورة</span></div>
+                <div class="word"><span>la caraffa</span><span>الإبريق</span></div>
+                <div class="word"><span>la forchetta</span><span>الشوكة</span></div>
+                <div class="word"><span>il coltello</span><span>السكين</span></div>
+                <div class="word"><span>il cucchiaio</span><span>الملعقة</span></div>
+                <div class="word"><span>il cucchiaino</span><span>الملعقة الصغيرة</span></div>
+                <div class="word"><span>il mestolo</span><span>مغرفة الطبخ</span></div>
+                <div class="word"><span>la spatola</span><span>ملعقة مسطحة / سباتولا</span></div>
+                <div class="word"><span>il tagliere</span><span>لوح التقطيع</span></div>
+                <div class="word"><span>la grattugia</span><span>المبشرة</span></div>
+                <div class="word"><span>lo scolapasta</span><span>مصفاة المعكرونة</span></div>
+                <div class="word"><span>il colino</span><span>المصفاة</span></div>
+                <div class="word"><span>l’apriscatole</span><span>فتاحة العلب</span></div>
+                <div class="word"><span>il cavatappi</span><span>فتاحة زجاجات</span></div>
+                <div class="word"><span>il frullatore</span><span>الخلاط</span></div>
+                <div class="word"><span>il mixer</span><span>الخلاط الكهربائي</span></div>
+                <div class="word"><span>il tostapane</span><span>محمصة الخبز</span></div>
+                <div class="word"><span>la macchina da caffè</span><span>آلة القهوة</span></div>
+                <div class="word"><span>il bollitore</span><span>غلاية الماء</span></div>
+                <div class="word"><span>la bilancia da cucina</span><span>ميزان المطبخ</span></div>
+                <div class="word"><span>il forno a microonde</span><span>فرن الميكروويف</span></div>
+                <div class="word"><span>il canovaccio</span><span>منشفة المطبخ</span></div>
+                <div class="word"><span>la spugna</span><span>الإسفنجة</span></div>
+                <div class="word"><span>il detersivo</span><span>سائل التنظيف</span></div>
+                <div class="word"><span>la pattumiera</span><span>سلة المهملات</span></div>
+                <div class="word"><span>il sacchetto</span><span>الكيس</span></div>
+                <div class="word"><span>il sale</span><span>الملح</span></div>
+                <div class="word"><span>lo zucchero</span><span>السكر</span></div>
+                <div class="word"><span>l’olio</span><span>الزيت</span></div>
+
+            </div>
+
+            <button class="close-category"
+                onclick="toggleSection('cucina','cucinaBtn','🍳 La Cucina','✖ Nascondi La Cucina')">
+                ✖ Chiudi La Cucina
+            </button>
+
         </div>
 
 
         <footer>
-            🇮🇹 Impara l'italiano • Impara ogni giorno una nuova parola
+            🇮🇹 Impara l'italiano — Una parola alla volta 🇮🇹
         </footer>
 
     </div>
@@ -1011,28 +1257,18 @@
 </div>
 
 
-<!-- ================================================= -->
-<!-- JAVASCRIPT -->
-<!-- ================================================= -->
-
 <script>
 
 function toggleSection(sectionId, buttonId, openText, closeText) {
 
-    const section =
-        document.getElementById(sectionId);
-
-    const button =
-        document.getElementById(buttonId);
-
+    const section = document.getElementById(sectionId);
+    const button = document.getElementById(buttonId);
 
     section.classList.toggle("show");
-
 
     if (section.classList.contains("show")) {
 
         button.innerHTML = closeText;
-
 
         setTimeout(() => {
 
@@ -1047,12 +1283,15 @@ function toggleSection(sectionId, buttonId, openText, closeText) {
 
         button.innerHTML = openText;
 
-    }
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
 
+    }
 }
 
 </script>
-
 
 </body>
 </html>
